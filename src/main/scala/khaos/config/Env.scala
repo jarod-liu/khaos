@@ -62,18 +62,22 @@ object Env extends Logger {
         for (f <- toTry) {
             if (file == null)
                 file = new File(f() + Ext)
-            if (!file.exists)
+            else if (!file.exists)
                 file = null
         }
-        for (
-            line <- Source.fromFile(file).getLines if (!line.startsWith("#"))
-        ) {
-            val tokens = line.split("=", 2)
-            if (tokens.length != 2)
-                warn("Ignored invalid line:" + line)
-            else
-                put(tokens(0), tokens(1))
-        }
+        if (file != null) {
+        	info("Env loading settings from " + file.getAbsolutePath)
+            for (
+                line <- Source.fromFile(file).getLines if (!line.startsWith("#"))
+            ) {
+                val tokens = line.split("=", 2)
+                if (tokens.length != 2)
+                    warn("Ignored invalid line: " + line)
+                else
+                    put(tokens(0), tokens(1))
+            }
+        } else 
+        	warn("No configuration file found in classpath!")
     }
 }
 
