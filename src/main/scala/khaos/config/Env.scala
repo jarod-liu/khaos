@@ -48,6 +48,7 @@ object Env extends Logger {
     private lazy val _hostName = dotLen(hostName)
 
     private val Ext = "conf"
+    	
     /**
      * The list of paths to search for property file resources.
      */
@@ -79,8 +80,4 @@ object Env extends Logger {
         } else 
         	warn("No configuration file found in classpath!")
     }
-}
-
-class Env {
-    private val kv = MapBean()
 }
