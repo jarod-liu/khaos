@@ -22,13 +22,6 @@ package khaos {
              * Note that the dynamic type of "this" is used when this trait is
              * mixed in. 
              * 
-             * This may not always be what you want. If you need the static type, you have to declare your
-             * own Logger:
-             * 
-             * class MyClass {
-             *   val logger = Logger(classOf[MyClass])
-             * }
-             * 
              */
             trait Logger {
                 private lazy val logger: org.slf4j.Logger = createLogger

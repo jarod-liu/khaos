@@ -1,5 +1,6 @@
 package khaos.env
 
+import java.io.InputStream
 import java.util.InvalidPropertiesFormatException
 import java.io.File
 import java.net.InetAddress
@@ -48,7 +49,7 @@ object Env extends Logger {
     private lazy val _hostName = dotLen(hostName)
 
     private val Ext = "conf"
-    	
+
     /**
      * The list of paths to search for property file resources.
      */
@@ -59,17 +60,20 @@ object Env extends Logger {
         () => "/" + _modeName + "default.")
 
     lazy val props = new MapBean() {
-        var file: File = null
+        var source: InputStream = null
         for (f <- toTry) {
-            if (file == null)
-                file = new File(f() + Ext)
-            else if (!file.exists)
-                file = null
+            if (source == null) {
+                val file = f() + Ext
+                source = getClass.getResourceAsStream(file)
+                if (source != null)
+                    info("Loading configuration from classpath:" + file)
+                else
+                    debug("Attempted loading configuration file classpath:" + file)
+            }
         }
-        if (file != null) {
-        	info("Env loading settings from " + file.getAbsolutePath)
+        if (source != null) {
             for (
-                line <- Source.fromFile(file).getLines if (!line.startsWith("#"))
+                line <- Source.fromInputStream(source).getLines if (!line.isEmpty && !line.startsWith("#"))
             ) {
                 val tokens = line.split("=", 2)
                 if (tokens.length != 2)
@@ -77,7 +81,7 @@ object Env extends Logger {
                 else
                     put(tokens(0), tokens(1))
             }
-        } else 
-        	warn("No configuration file found in classpath!")
+        } else
+            warn("No configuration file found in classpath!")
     }
 }
