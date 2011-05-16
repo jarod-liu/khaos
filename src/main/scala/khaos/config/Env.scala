@@ -27,7 +27,7 @@ object Env extends Logger {
     }
 
     lazy val isProductionMode = mode == Production
-    lazy val isDevlopmentMode = mode == Development
+    lazy val isDevelopmentMode = mode == Development
     lazy val isTestMode = mode == Test
 
     lazy val modeName = mode match {

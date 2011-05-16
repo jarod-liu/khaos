@@ -7,7 +7,7 @@ class KhaosProject(info: ProjectInfo) extends DefaultProject(info) {
 
     override def libraryDependencies = Set(
         "org.slf4j" % "slf4j-api" % "[1.5, )" % "provided" withSources, 
-        "org.eclipse.jetty" % "jetty-webapp" % "7.2.0.v20101020" % "provided", 
+        "org.eclipse.jetty" % "jetty-webapp" % "[7, )" % "provided", 
         "org.jboss.netty" % "netty" % "[3.2,)" % "provided" withSources
     ) ++ super.libraryDependencies
 }
