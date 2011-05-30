@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/scala"/>
-	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-continuation-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-http-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-io-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-security-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-server-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-servlet-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-util-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-webapp-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/jetty-xml-7.2.0.v20101020.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/netty-3.2.3.Final.jar" sourcepath="lib_managed/scala_2.8.1/provided/netty-3.2.3.Final-sources.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/servlet-api-2.5.jar"/>
-	<classpathentry kind="lib" path="lib_managed/scala_2.8.1/provided/slf4j-api-1.6.1.jar" sourcepath="lib_managed/scala_2.8.1/provided/slf4j-api-1.6.1-sources.jar"/>
+	<classpathentry exported="true" kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-continuation-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-http-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-io-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-security-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-server-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-servlet-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-util-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-webapp-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/jetty-xml-7.4.2.v20110526.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/netty-3.2.4.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/servlet-api-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib_managed/scala_2.9.0-1/provided/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

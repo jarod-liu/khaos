@@ -6,9 +6,9 @@ class KhaosProject(info: ProjectInfo) extends DefaultProject(info) {
     val jbossRepo = "jboss" at "https://repository.jboss.org/nexus/content/groups/public/"
 
     override def libraryDependencies = Set(
-        "org.slf4j" % "slf4j-api" % "[1.5, )" % "provided" withSources, 
-        "org.eclipse.jetty" % "jetty-webapp" % "[7, )" % "provided", 
-        "org.jboss.netty" % "netty" % "[3.2,)" % "provided" withSources
+        "org.slf4j" % "slf4j-api" % "[1.5, )" % "provided",
+        "org.eclipse.jetty" % "jetty-webapp" % "[7, 8)" % "provided", 
+        "org.jboss.netty" % "netty" % "[3.2,)" % "provided"
     ) ++ super.libraryDependencies
 }
 
