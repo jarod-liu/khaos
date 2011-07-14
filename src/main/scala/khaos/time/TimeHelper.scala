@@ -2,6 +2,8 @@ package khaos.time
 
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.Executors
+import org.joda.time.DateTime
+import java.util.Date
 
 object TimeHelper {
     lazy val MillisPerSecond = 1000L
@@ -34,4 +36,8 @@ object TimeHelper {
     def systemTime = _systemTime
 
     def systemTimeSecs = (systemTime / 1000).toInt
+
+    def dateTimeNow = new DateTime(_systemTime)
+
+    def dateNow() = new Date(_systemTime)
 }
